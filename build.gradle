@@ -4,7 +4,6 @@ buildscript {
     ext {
         springBootVersion = '1.5.4.RELEASE'
         ratpackVersion = '1.4.5'
-        gradleVersion = '4.3.1'
     }
 
     repositories {
@@ -34,7 +33,7 @@ allprojects {
     }
 
     task wrapper(type: Wrapper) {
-        gradleVersion = ext.gradleVersion
+        gradleVersion = '4.3.1'
     }
 }
 
