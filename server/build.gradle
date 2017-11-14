@@ -10,9 +10,9 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
 
-    compile 'io.ratpack:ratpack-rx'
-    compile 'io.ratpack:ratpack-spring-boot'
-    compile 'io.ratpack:ratpack-groovy'
+    compile group: 'io.ratpack', name: 'ratpack-rx'
+    compile group: 'io.ratpack', name: 'ratpack-spring-boot'
+    compile group: 'io.ratpack', name: 'ratpack-groovy'
 }
