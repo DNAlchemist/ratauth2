@@ -15,29 +15,5 @@ buildscript {
     }
 }
 
-allprojects {
-    apply plugin: 'io.spring.dependency-management'
-
-    configurations {
-        compile.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
-    }
-
-    dependencyManagement {
-        dependencies {
-            [
-                    "io.ratpack:ratpack-rx:${ratpackVersion}",
-                    "io.ratpack:ratpack-spring-boot:${ratpackVersion}",
-                    "io.ratpack:ratpack-groovy:${ratpackVersion}"
-            ].each({ artifact -> owner.delegate.dependency(artifact) })
-        }
-    }
-}
-
-subprojects {
-    group = rootProject.group
-    apply plugin: 'groovy'
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.3.1'
-}
+apply from: 'gradle/root/all-projects.gradle'
+apply from: 'gradle/root/subprojects.gradle'

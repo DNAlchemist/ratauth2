@@ -1,0 +1,4 @@
+subprojects {
+    group = rootProject.group
+    apply plugin: 'groovy'
+}
