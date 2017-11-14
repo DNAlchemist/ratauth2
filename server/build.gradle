@@ -1,0 +1,18 @@
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+
+    compile 'io.ratpack:ratpack-rx'
+    compile 'io.ratpack:ratpack-spring-boot'
+    compile 'io.ratpack:ratpack-groovy'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.3.1'
+}
